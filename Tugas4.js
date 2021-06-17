@@ -19,10 +19,13 @@ function runTimer(time) {
 		newMinutes = ('0' + minutes).slice(-2);
 		let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 		newSeconds = ('0' + seconds).slice(-2);
-		if (minutes > time && newSeconds == 0) {
-			conMinutes = ('0' + time).slice(-2);
+		if (minutes > 0 && seconds == 0) {
+			conMinutes = ('0' + (minutes - 1)).slice(-2);
 
 			console.log(conMinutes + ':' + 60);
+		} else if (minutes == 0 && seconds == 0) {
+			console.log('TIMER STOP !');
+			clearInterval(timer);
 		} else {
 			// Output the result
 
@@ -31,4 +34,4 @@ function runTimer(time) {
 	}, 1000);
 }
 
-runTimer(3);
+runTimer(1);
