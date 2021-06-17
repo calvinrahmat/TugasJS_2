@@ -5,7 +5,7 @@ function runTimer(time) {
 	//convert today's date to ms and add newtime
 	const countDownMinutes = new Date().getTime() + newTime;
 
-	const x = setInterval(function () {
+	const timer = setInterval(function () {
 		// get today's date
 		let now = new Date().getTime();
 
