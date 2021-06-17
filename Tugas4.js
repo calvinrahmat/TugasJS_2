@@ -1,6 +1,6 @@
 function runTimer(time) {
 	//convert input to milliseconds according to the task
-	newTime = time * 60000 + 1000 + 60000;
+	newTime = time * 60000 + 2000 + 60000;
 
 	//convert today's date to ms and add newtime
 	const countDownMinutes = new Date().getTime() + newTime;
@@ -19,11 +19,16 @@ function runTimer(time) {
 		newMinutes = ('0' + minutes).slice(-2);
 		let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 		newSeconds = ('0' + seconds).slice(-2);
+		if (minutes > time && newSeconds == 0) {
+			conMinutes = ('0' + time).slice(-2);
 
-		// Output the result
+			console.log(conMinutes + ':' + 60);
+		} else {
+			// Output the result
 
-		console.log(newMinutes + ':' + newSeconds);
+			console.log(newMinutes + ':' + newSeconds);
+		}
 	}, 1000);
 }
 
-runTimer(2);
+runTimer(3);
