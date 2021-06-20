@@ -20,9 +20,7 @@ newStr2 = newStr1.concat(str3);
 //3. map()
 
 let arr = [2, 3, 4];
-const newArr = arr.map(function (num) {
-	return num * 10;
-});
+const newArr = arr.map((num) => num * 10);
 
 console.log(newArr);
 
@@ -37,9 +35,10 @@ let players = [
 	},
 ];
 
-const getFullName = players.map(function (name) {
-	return [name.firstName, name.lastName].join(' ');
-});
+const getFullName = players.map((name) =>
+	[name.firstName, name.lastName].join(' ')
+);
+
 console.log(getFullName);
 
 //4. sort()
