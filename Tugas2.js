@@ -17,7 +17,7 @@ const name = [
 	'Penelope',
 ];
 
-let searchName = (char, limit, myCallBack) => {
+function searchName(char, limit, myCallBack) {
 	//convert char input to lowercase
 	newChar = char.toLowerCase();
 
@@ -32,7 +32,7 @@ let searchName = (char, limit, myCallBack) => {
 
 	//process to function
 	myCallBack();
-};
+}
 
 const callBack = () => {
 	//convert data name back to normal (with first character in uppercase)
