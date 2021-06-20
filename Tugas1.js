@@ -5,7 +5,7 @@
 const num = 7.23455;
 
 numPrecision = num.toPrecision(3);
-//console.log(numPrecision);
+console.log(`1. toPrecision() : ${numPrecision}`);
 
 //2. concat()
 
@@ -15,14 +15,9 @@ let str3 = 'bola';
 
 newStr1 = str1.concat(str2);
 newStr2 = newStr1.concat(str3);
-//console.log(newStr2);
+console.log(`2. concat(): ${newStr2}`);
 
 //3. map()
-
-let arr = [2, 3, 4];
-const newArr = arr.map((num) => num * 10);
-
-console.log(newArr);
 
 let players = [
 	{
@@ -39,15 +34,15 @@ const getFullName = players.map((name) =>
 	[name.firstName, name.lastName].join(' ')
 );
 
-console.log(getFullName);
+console.log(`3. map() : ${getFullName}`);
 
 //4. sort()
 
 let arr2 = ['red', 'blue', 'green', 'yellow', 'purple'];
 sortedArr = arr2.sort();
-console.log(sortedArr);
+console.log(`4. sort(): ${sortedArr}`);
 
 //5. slice()
 let par = 'roses are red, violets are blue';
 slicedPar = par.slice(3, -4);
-console.log(slicedPar);
+console.log(`5. ${slicedPar}`);
