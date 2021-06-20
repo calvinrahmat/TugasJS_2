@@ -45,4 +45,4 @@ console.log(`4. sort(): ${sortedArr}`);
 //5. slice()
 let par = 'roses are red, violets are blue';
 slicedPar = par.slice(3, -4);
-console.log(`5. ${slicedPar}`);
+console.log(`5. slice(): ${slicedPar}`);
